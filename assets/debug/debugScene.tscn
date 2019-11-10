@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/debug/debugText.gd" type="Script" id=1]
+
+[node name="DebugText" type="Label"]
+margin_right = 1024.0
+margin_bottom = 599.0
+script = ExtResource( 1 )
