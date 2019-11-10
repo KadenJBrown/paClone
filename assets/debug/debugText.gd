@@ -10,4 +10,4 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	text = ("Time passed - global.totalDeltaTitle - " + str(global.totalDeltaTitle) + "\nFloor divided - floor(global.totalDeltaTitle) - " + str(floor(global.totalDeltaTitle)) + "\nCharacters visible in title - visible_characters - global.titleShown - " + str(global.titleShown) + "\nIs in game? - global.inGame - " + str(global.inGame))
+	text = ("Time passed - global.totalDeltaTitle - " + str(global.totalDeltaTitle) + "\nFloor divided - floor(global.totalDeltaTitle) - " + str(floor(global.totalDeltaTitle)) + "\nCharacters visible in title - visible_characters - global.titleShown - " + str(global.titleShown) + "\nIs in game? - global.inGame - " + str(global.inGame) + "\nScore - global.score - " + str(global.score))

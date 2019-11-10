@@ -23,7 +23,6 @@ custom_fonts/font = SubResource( 1 )
 text = "PAcLONE"
 align = 1
 valign = 1
-percent_visible = -0.142857
 script = ExtResource( 2 )
 
 [node name="startButton" type="Button" parent="."]
