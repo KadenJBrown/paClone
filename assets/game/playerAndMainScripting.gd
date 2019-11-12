@@ -1,12 +1,17 @@
 extends KinematicBody2D
 
 var current_dir = Vector2(1,0)
-var next_dir = Vector2(0,0)
+var next_dir = null
+var speed = 200
+var framenum = 0
 
 func _ready():
 	hide()
 
 func _process(delta):
+	framenum += delta
+	if int(framenum) % 2:
+		$Sprite.texture = "res://assets/image/paClosed.png"
 	if global.inGame == true:
 		show()
 		# Find next direction
@@ -18,15 +23,34 @@ func _process(delta):
 			next_dir = Vector2(-1,0)
 		elif Input.is_action_just_pressed("ui_right"):
 			next_dir = Vector2(1,0)
-		# Check if on next direction
-		if !move_and_collide(next_dir*delta, true, true, true):
-			current_dir = next_dir
-			next_dir = Vector2(0,0)
-		move_and_collide(current_dir/(delta*10))
+		# Check if on next direction and move
+		if next_dir != null:
+			if !move_and_collide(next_dir*delta*speed):
+				current_dir = next_dir
+				next_dir = null
+			else:
+				move_and_collide(-(next_dir*delta*speed))
+				move_and_collide(current_dir*delta*speed)
+			position += current_dir * -1
+		else:
+			move_and_collide(current_dir*delta*speed)
+			position += current_dir * -1
+		# Turn
+		if current_dir == Vector2(1,0):
+			rotation_degrees = 0
+		elif current_dir == Vector2(-1,0):
+			rotation_degrees = 180
+		elif current_dir == Vector2(0,1):
+			rotation_degrees = 90
+		elif current_dir == Vector2(0,-1):
+			rotation_degrees = 270
+		else:
+			print("THIS SHOULD NEVER HAPPEN. "+str(current_dir))
 	else:
 		# Ready player data
 		hide()
 		position.x = 512
 		position.y = 400
 		current_dir = Vector2(1,0)
-		next_dir = Vector2(0,0)
+		next_dir = null
+		framenum = 0
