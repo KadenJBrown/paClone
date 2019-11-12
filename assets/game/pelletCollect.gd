@@ -14,6 +14,6 @@ func _process(delta):
 
 func _on_Pellet_area_entered(area):
 	pass
-	if area == $"/root/Player/Body":
+	if area == $"/root/Player":
 		hide()
 		global.score += 1
