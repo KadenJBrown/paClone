@@ -7,5 +7,9 @@ This project was made for fun and to understand godot better
 - [x] Title screen
 - [x] Player map
 - [x] Player movement
+- [x] Player animation (wow 2 frames)
+- [x] Hyperspace
+- [x] Round placement
+- [ ] Fix hallway blockage
 - [ ] Pellet collect code
 - [ ] ...
