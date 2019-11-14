@@ -25,8 +25,6 @@ func _process(delta):
 			next_dir = Vector2(-1,0)
 		elif Input.is_action_just_pressed("ui_right"):
 			next_dir = Vector2(1,0)
-		# Round pos
-		position = Vector2(int(position.x),int(position.y))
 		# Check if on next direction and move
 		if next_dir != null:
 			if !move_and_collide(next_dir*delta*speed):
