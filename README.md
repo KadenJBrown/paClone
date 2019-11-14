@@ -12,5 +12,7 @@ This project was made for fun and to understand godot better
 - [x] Fix hallway blockage
 - [x] Pellet collect code
 - [x] Winable
-- [ ] Resettable
+- [x] Resettable
+- [ ] Failable
+- [ ] Ghost AI
 - [ ] ...

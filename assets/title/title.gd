@@ -12,7 +12,6 @@ func soundPlay():
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible_characters = 0
-	self.add_child(sfx)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -38,7 +37,9 @@ func _process(delta):
 		visible_characters = 0
 		hide()
 		if global.inGame == false:
-			disabled = true
+			disabled = false
+			visible_characters = 0
+			global.totalDeltaTitle = 0
 
 func _on_startButton_pressed():
 	disabled = true

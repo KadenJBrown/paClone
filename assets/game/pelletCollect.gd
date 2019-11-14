@@ -18,6 +18,8 @@ func _process(delta):
 		global.score += 1
 	if global.inGame == false:
 		show()
+		disabled = false
+		justStarted = true
 
 func _on_Pellet_body_entered(body):
 	if body == player && !disabled:
