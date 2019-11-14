@@ -15,4 +15,4 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( -1.22943, 0 )
 shape = SubResource( 1 )
-[connection signal="area_entered" from="." to="." method="_on_Pellet_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_Pellet_body_entered"]

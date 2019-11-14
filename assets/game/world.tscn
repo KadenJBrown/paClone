@@ -407,13 +407,732 @@ points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
 position = Vector2( 512, 400 )
-scale = Vector2( 1.28, 1.28 )
 
 [node name="wallMap" type="TileMap" parent="."]
 tile_set = SubResource( 43 )
 cell_size = Vector2( 32, 32 )
 format = 1
-tile_data = PoolIntArray( 2, 0, 196608, 3, 0, 327681, 4, 0, 196609, 5, 0, 327681, 6, 0, 327681, 7, 0, 589825, 8, 0, 196609, 9, 0, 327681, 10, 0, 327681, 11, 0, 327681, 12, 0, 196609, 13, 0, 327681, 14, 0, 327681, 15, 0, 720896, 16, 0, 851968, 17, 0, 327681, 18, 0, 196609, 19, 0, 196609, 20, 0, 196609, 21, 0, 196609, 22, 0, 196609, 23, 0, 327681, 24, 0, 589825, 25, 0, 196609, 26, 0, 196609, 27, 0, 196609, 28, 0, 327681, 29, 0, 196610, 65538, 0, 262146, 65543, 0, 262144, 65551, 0, 65536, 65552, 0, 65538, 65560, 0, 262144, 65565, 0, 262144, 131074, 0, 262146, 131076, 0, 393216, 131077, 0, 393217, 131079, 0, 262146, 131081, 0, 458752, 131083, 0, 458752, 131085, 0, 458752, 131087, 0, 65536, 131088, 0, 65538, 131090, 0, 458752, 131092, 0, 262145, 131094, 0, 458752, 131096, 0, 262146, 131098, 0, 393216, 131099, 0, 393217, 131101, 0, 262144, 196610, 0, 262144, 196615, 0, 524288, 196617, 0, 262144, 196619, 0, 524288, 196621, 0, 262144, 196623, 0, 131072, 196624, 0, 131074, 196626, 0, 262146, 196630, 0, 262144, 196632, 0, 524288, 196637, 0, 262144, 262146, 0, 327680, 262147, 0, 196609, 262148, 0, 196609, 262149, 0, 196610, 262153, 0, 262144, 262157, 0, 262144, 262162, 0, 262144, 262164, 0, 458752, 262166, 0, 262144, 262170, 0, 196608, 262171, 0, 196609, 262172, 0, 327681, 262173, 0, 327682, 327685, 0, 262146, 327687, 0, 393216, 327688, 0, 327681, 327689, 0, 327682, 327691, 0, 262145, 327693, 0, 327680, 327694, 0, 327681, 327695, 0, 196609, 327696, 0, 196609, 327697, 0, 327681, 327698, 0, 327682, 327700, 0, 524288, 327702, 0, 327680, 327703, 0, 327681, 327704, 0, 393217, 327706, 0, 262146, 393217, 0, 196608, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 327681, 393221, 0, 655361, 393242, 0, 589826, 393243, 0, 327681, 393244, 0, 327681, 393245, 0, 196609, 393246, 0, 196610, 458753, 0, 262146, 458757, 0, 262146, 458759, 0, 0, 458760, 0, 1, 458761, 0, 2, 458763, 0, 458752, 458765, 0, 196608, 458766, 0, 196609, 458767, 0, 327681, 458768, 0, 196609, 458769, 0, 327681, 458770, 0, 196610, 458772, 0, 458752, 458774, 0, 0, 458775, 0, 1, 458776, 0, 2, 458778, 0, 262144, 458782, 0, 262144, 589823, 0, 393216, 524288, 0, 327681, 524289, 0, 327682, 524291, 0, 458752, 524293, 0, 524288, 524295, 0, 131072, 524296, 0, 131073, 524297, 0, 131074, 524299, 0, 262144, 524301, 0, 524288, 524306, 0, 524288, 524308, 0, 262146, 524310, 0, 131072, 524311, 0, 131073, 524312, 0, 131074, 524314, 0, 524288, 524316, 0, 458752, 524318, 0, 327680, 524319, 0, 196609, 524320, 0, 393217, 589827, 0, 262144, 589835, 0, 262146, 589844, 0, 262146, 589852, 0, 262146, 720895, 0, 393216, 655360, 0, 196609, 655361, 0, 196610, 655363, 0, 524288, 655365, 0, 458752, 655367, 0, 0, 655368, 0, 1, 655369, 0, 2, 655371, 0, 262144, 655373, 0, 458752, 655378, 0, 458752, 655380, 0, 262146, 655382, 0, 0, 655383, 0, 1, 655384, 0, 2, 655386, 0, 458752, 655388, 0, 524288, 655390, 0, 196608, 655391, 0, 196609, 655392, 0, 393217, 720897, 0, 262144, 720901, 0, 262144, 720903, 0, 131072, 720904, 0, 131073, 720905, 0, 131074, 720907, 0, 524288, 720909, 0, 327680, 720910, 0, 196609, 720911, 0, 327681, 720912, 0, 196609, 720913, 0, 196609, 720914, 0, 327682, 720916, 0, 524288, 720918, 0, 131072, 720919, 0, 131073, 720920, 0, 131074, 720922, 0, 262146, 720926, 0, 262146, 786433, 0, 327680, 786434, 0, 196609, 786435, 0, 327681, 786436, 0, 327681, 786437, 0, 655361, 786458, 0, 589826, 786459, 0, 327681, 786460, 0, 196609, 786461, 0, 196609, 786462, 0, 327682, 851973, 0, 262146, 851975, 0, 393216, 851976, 0, 196609, 851977, 0, 196610, 851979, 0, 262145, 851981, 0, 196608, 851982, 0, 196609, 851983, 0, 196609, 851984, 0, 196609, 851985, 0, 196609, 851986, 0, 196610, 851988, 0, 458752, 851990, 0, 196608, 851991, 0, 327681, 851992, 0, 393217, 851994, 0, 262144, 917506, 0, 196608, 917507, 0, 327681, 917508, 0, 196609, 917509, 0, 327682, 917513, 0, 262146, 917517, 0, 262146, 917522, 0, 262146, 917524, 0, 524288, 917526, 0, 262144, 917530, 0, 327680, 917531, 0, 327681, 917532, 0, 327681, 917533, 0, 196610, 983042, 0, 262144, 983047, 0, 458752, 983049, 0, 262144, 983051, 0, 458752, 983053, 0, 262146, 983055, 0, 0, 983056, 0, 2, 983058, 0, 262144, 983062, 0, 262146, 983064, 0, 458752, 983069, 0, 262144, 1048578, 0, 262144, 1048580, 0, 393216, 1048581, 0, 393217, 1048583, 0, 262144, 1048585, 0, 524288, 1048587, 0, 524288, 1048589, 0, 524288, 1048591, 0, 65536, 1048592, 0, 65538, 1048594, 0, 524288, 1048596, 0, 262145, 1048598, 0, 524288, 1048600, 0, 262146, 1048602, 0, 393216, 1048603, 0, 393217, 1048605, 0, 262146, 1114114, 0, 262144, 1114119, 0, 262144, 1114127, 0, 65536, 1114128, 0, 65538, 1114136, 0, 262144, 1114141, 0, 262144, 1179650, 0, 327680, 1179651, 0, 327681, 1179652, 0, 196609, 1179653, 0, 327681, 1179654, 0, 196609, 1179655, 0, 655360, 1179656, 0, 196609, 1179657, 0, 327681, 1179658, 0, 327681, 1179659, 0, 196609, 1179660, 0, 196609, 1179661, 0, 196609, 1179662, 0, 196609, 1179663, 0, 786433, 1179664, 0, 720898, 1179665, 0, 327681, 1179666, 0, 196609, 1179667, 0, 196609, 1179668, 0, 327681, 1179669, 0, 196609, 1179670, 0, 196609, 1179671, 0, 196609, 1179672, 0, 655360, 1179673, 0, 196609, 1179674, 0, 327681, 1179675, 0, 327681, 1179676, 0, 327681, 1179677, 0, 327682 )
+tile_data = PoolIntArray( 2, 0, 196608, 3, 0, 327681, 4, 0, 196609, 5, 0, 327681, 6, 0, 327681, 7, 0, 589825, 8, 0, 196609, 9, 0, 327681, 10, 0, 327681, 11, 0, 327681, 12, 0, 196609, 13, 0, 327681, 14, 0, 327681, 15, 0, 720896, 16, 0, 851968, 17, 0, 327681, 18, 0, 196609, 19, 0, 196609, 20, 0, 196609, 21, 0, 196609, 22, 0, 196609, 23, 0, 327681, 24, 0, 589825, 25, 0, 196609, 26, 0, 196609, 27, 0, 196609, 28, 0, 327681, 29, 0, 196610, 65538, 0, 262146, 65543, 0, 262144, 65551, 0, 65536, 65552, 0, 65538, 65560, 0, 262144, 65565, 0, 262144, 131074, 0, 262146, 131076, 0, 393216, 131077, 0, 393217, 131079, 0, 262146, 131081, 0, 458752, 131083, 0, 458752, 131085, 0, 458752, 131087, 0, 65536, 131088, 0, 65538, 131090, 0, 458752, 131092, 0, 262145, 131094, 0, 458752, 131096, 0, 262146, 131098, 0, 393216, 131099, 0, 393217, 131101, 0, 262144, 196610, 0, 262144, 196615, 0, 524288, 196617, 0, 262144, 196619, 0, 524288, 196621, 0, 262144, 196623, 0, 131072, 196624, 0, 131074, 196626, 0, 262146, 196630, 0, 262144, 196632, 0, 524288, 196637, 0, 262144, 262146, 0, 327680, 262147, 0, 196609, 262148, 0, 196609, 262149, 0, 196610, 262153, 0, 262144, 262157, 0, 262144, 262162, 0, 262144, 262164, 0, 458752, 262166, 0, 262144, 262170, 0, 196608, 262171, 0, 196609, 262172, 0, 327681, 262173, 0, 327682, 327685, 0, 262146, 327687, 0, 393216, 327688, 0, 327681, 327689, 0, 327682, 327691, 0, 262145, 327693, 0, 327680, 327694, 0, 327681, 327695, 0, 196609, 327696, 0, 196609, 327697, 0, 327681, 327698, 0, 327682, 327700, 0, 524288, 327702, 0, 327680, 327703, 0, 327681, 327704, 0, 393217, 327706, 0, 262146, 393217, 0, 196608, 393218, 0, 196609, 393219, 0, 196609, 393220, 0, 327681, 393221, 0, 655361, 393242, 0, 589826, 393243, 0, 327681, 393244, 0, 327681, 393245, 0, 196609, 393246, 0, 196610, 458753, 0, 262146, 458757, 0, 262146, 458759, 0, 0, 458760, 0, 1, 458761, 0, 2, 458763, 0, 458752, 458765, 0, 196608, 458766, 0, 196609, 458767, 0, 327681, 458768, 0, 196609, 458769, 0, 327681, 458770, 0, 196610, 458772, 0, 458752, 458774, 0, 0, 458775, 0, 1, 458776, 0, 2, 458778, 0, 262144, 458782, 0, 262144, 589821, 0, 393216, 589822, 0, 196609, 589823, 0, 327681, 524288, 0, 327681, 524289, 0, 327682, 524291, 0, 458752, 524293, 0, 524288, 524295, 0, 131072, 524296, 0, 131073, 524297, 0, 131074, 524299, 0, 262144, 524301, 0, 524288, 524306, 0, 524288, 524308, 0, 262146, 524310, 0, 131072, 524311, 0, 131073, 524312, 0, 131074, 524314, 0, 524288, 524316, 0, 458752, 524318, 0, 327680, 524319, 0, 196609, 524320, 0, 327681, 524321, 0, 327681, 524322, 0, 393217, 589827, 0, 262144, 589835, 0, 262146, 589844, 0, 262146, 589852, 0, 262146, 720893, 0, 393216, 720894, 0, 196609, 720895, 0, 327681, 655360, 0, 196609, 655361, 0, 196610, 655363, 0, 524288, 655365, 0, 458752, 655367, 0, 0, 655368, 0, 1, 655369, 0, 2, 655371, 0, 262144, 655373, 0, 458752, 655378, 0, 458752, 655380, 0, 262146, 655382, 0, 0, 655383, 0, 1, 655384, 0, 2, 655386, 0, 458752, 655388, 0, 524288, 655390, 0, 196608, 655391, 0, 196609, 655392, 0, 196609, 655393, 0, 327681, 655394, 0, 393217, 720897, 0, 262144, 720901, 0, 262144, 720903, 0, 131072, 720904, 0, 131073, 720905, 0, 131074, 720907, 0, 524288, 720909, 0, 327680, 720910, 0, 196609, 720911, 0, 327681, 720912, 0, 196609, 720913, 0, 196609, 720914, 0, 327682, 720916, 0, 524288, 720918, 0, 131072, 720919, 0, 131073, 720920, 0, 131074, 720922, 0, 262146, 720926, 0, 262146, 786433, 0, 327680, 786434, 0, 196609, 786435, 0, 327681, 786436, 0, 327681, 786437, 0, 655361, 786458, 0, 589826, 786459, 0, 327681, 786460, 0, 196609, 786461, 0, 196609, 786462, 0, 327682, 851973, 0, 262146, 851975, 0, 393216, 851976, 0, 196609, 851977, 0, 196610, 851979, 0, 262145, 851981, 0, 196608, 851982, 0, 196609, 851983, 0, 196609, 851984, 0, 196609, 851985, 0, 196609, 851986, 0, 196610, 851988, 0, 458752, 851990, 0, 196608, 851991, 0, 327681, 851992, 0, 393217, 851994, 0, 262144, 917506, 0, 196608, 917507, 0, 327681, 917508, 0, 196609, 917509, 0, 327682, 917513, 0, 262146, 917517, 0, 262146, 917522, 0, 262146, 917524, 0, 524288, 917526, 0, 262144, 917530, 0, 327680, 917531, 0, 327681, 917532, 0, 327681, 917533, 0, 196610, 983042, 0, 262144, 983047, 0, 458752, 983049, 0, 262144, 983051, 0, 458752, 983053, 0, 262146, 983055, 0, 0, 983056, 0, 2, 983058, 0, 262144, 983062, 0, 262146, 983064, 0, 458752, 983069, 0, 262144, 1048578, 0, 262144, 1048580, 0, 393216, 1048581, 0, 393217, 1048583, 0, 262144, 1048585, 0, 524288, 1048587, 0, 524288, 1048589, 0, 524288, 1048591, 0, 65536, 1048592, 0, 65538, 1048594, 0, 524288, 1048596, 0, 262145, 1048598, 0, 524288, 1048600, 0, 262146, 1048602, 0, 393216, 1048603, 0, 393217, 1048605, 0, 262146, 1114114, 0, 262144, 1114119, 0, 262144, 1114127, 0, 65536, 1114128, 0, 65538, 1114136, 0, 262144, 1114141, 0, 262144, 1179650, 0, 327680, 1179651, 0, 327681, 1179652, 0, 196609, 1179653, 0, 327681, 1179654, 0, 196609, 1179655, 0, 655360, 1179656, 0, 196609, 1179657, 0, 327681, 1179658, 0, 327681, 1179659, 0, 196609, 1179660, 0, 196609, 1179661, 0, 196609, 1179662, 0, 196609, 1179663, 0, 786433, 1179664, 0, 720898, 1179665, 0, 327681, 1179666, 0, 196609, 1179667, 0, 196609, 1179668, 0, 327681, 1179669, 0, 196609, 1179670, 0, 196609, 1179671, 0, 196609, 1179672, 0, 655360, 1179673, 0, 196609, 1179674, 0, 327681, 1179675, 0, 327681, 1179676, 0, 327681, 1179677, 0, 327682 )
 
-[node name="Pellet" parent="." instance=ExtResource( 3 )]
-position = Vector2( 512.512, 306.521 )
+[node name="Pellets" type="Node" parent="."]
+editor/display_folded = true
+
+[node name="Pellet16" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 402.459, 48 )
+
+[node name="Pellet32" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 400, 560 )
+
+[node name="Pellet101" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 692.918, 48 )
+
+[node name="Pellet159" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 531.688, 208 )
+
+[node name="Pellet114" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 688, 560 )
+
+[node name="Pellet119" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 305.229, 48 )
+
+[node name="Pellet127" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 304, 560 )
+
+[node name="Pellet131" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 594.459, 48 )
+
+[node name="Pellet157" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 433.229, 208 )
+
+[node name="Pellet134" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 592, 560 )
+
+[node name="Pellet37" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 338.459, 48 )
+
+[node name="Pellet163" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 558.771, 80 )
+
+[node name="Pellet174" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 558.771, 464 )
+
+[node name="Pellet166" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 462.771, 80 )
+
+[node name="Pellet173" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 462.771, 464 )
+
+[node name="Pellet46" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 336, 560 )
+
+[node name="Pellet88" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 628.918, 48 )
+
+[node name="Pellet156" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 467.688, 208 )
+
+[node name="Pellet111" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 622.771, 560 )
+
+[node name="Pellet120" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 432, 48 )
+
+[node name="Pellet168" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 496, 144 )
+
+[node name="Pellet170" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 496, 464 )
+
+[node name="Pellet125" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 433.229, 560 )
+
+[node name="Pellet130" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 722.459, 48 )
+
+[node name="Pellet158" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 561.229, 208 )
+
+[node name="Pellet136" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 720, 560 )
+
+[node name="Pellet122" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 464, 48 )
+
+[node name="Pellet167" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 528, 144 )
+
+[node name="Pellet175" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 528, 464 )
+
+[node name="Pellet123" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 465.229, 560 )
+
+[node name="Pellet128" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 48 )
+
+[node name="Pellet155" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 593.229, 208 )
+
+[node name="Pellet133" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 752, 560 )
+
+[node name="Pellet118" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 368, 48 )
+
+[node name="Pellet124" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 369.229, 560 )
+
+[node name="Pellet129" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 658.459, 48 )
+
+[node name="Pellet160" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 497.229, 208 )
+
+[node name="Pellet137" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 656, 560 )
+
+[node name="Pellet121" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 48 )
+
+[node name="Pellet126" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 560 )
+
+[node name="Pellet132" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 560, 48 )
+
+[node name="Pellet135" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 560, 560 )
+
+[node name="Pellet60" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 210.459, 48 )
+
+[node name="Pellet244" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 112, 48 )
+
+[node name="Pellet83" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 818.459, 48 )
+
+[node name="Pellet27" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 304 )
+
+[node name="Pellet94" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 304 )
+
+[node name="Pellet43" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 304 )
+
+[node name="Pellet106" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 304 )
+
+[node name="Pellet57" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 304 )
+
+[node name="Pellet241" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 176, 304 )
+
+[node name="Pellet73" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 304 )
+
+[node name="Pellet225" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 880, 304 )
+
+[node name="Pellet236" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 80, 304 )
+
+[node name="Pellet226" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 941.541, 304 )
+
+[node name="Pellet235" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 141.541, 304 )
+
+[node name="Pellet222" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 846.771, 304 )
+
+[node name="Pellet22" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 176 )
+
+[node name="Pellet95" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 176 )
+
+[node name="Pellet44" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 176 )
+
+[node name="Pellet113" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 176 )
+
+[node name="Pellet62" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 176 )
+
+[node name="Pellet77" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 176 )
+
+[node name="Pellet183" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 784, 464 )
+
+[node name="Pellet31" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 400, 432 )
+
+[node name="Pellet103" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 688, 432 )
+
+[node name="Pellet47" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 336, 432 )
+
+[node name="Pellet115" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 624, 432 )
+
+[node name="Pellet64" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 208, 432 )
+
+[node name="Pellet80" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 816, 432 )
+
+[node name="Pellet19" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 402.459, 112 )
+
+[node name="Pellet86" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 690.459, 112 )
+
+[node name="Pellet35" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 338.459, 112 )
+
+[node name="Pellet162" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 558.771, 144 )
+
+[node name="Pellet169" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 558.771, 528 )
+
+[node name="Pellet164" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 462.771, 144 )
+
+[node name="Pellet171" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 462.771, 528 )
+
+[node name="Pellet109" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 626.459, 112 )
+
+[node name="Pellet58" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 210.459, 112 )
+
+[node name="Pellet243" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 112, 112 )
+
+[node name="Pellet74" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 818.459, 112 )
+
+[node name="Pellet25" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 368 )
+
+[node name="Pellet85" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 368 )
+
+[node name="Pellet34" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 368 )
+
+[node name="Pellet110" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 368 )
+
+[node name="Pellet59" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 368 )
+
+[node name="Pellet75" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 368 )
+
+[node name="Pellet21" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 240 )
+
+[node name="Pellet87" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 240 )
+
+[node name="Pellet36" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 240 )
+
+[node name="Pellet99" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 240 )
+
+[node name="Pellet52" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 240 )
+
+[node name="Pellet70" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 240 )
+
+[node name="Pellet26" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 400, 496 )
+
+[node name="Pellet89" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 688, 496 )
+
+[node name="Pellet38" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 336, 496 )
+
+[node name="Pellet97" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 624, 496 )
+
+[node name="Pellet189" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 657.229, 496 )
+
+[node name="Pellet192" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 656, 208 )
+
+[node name="Pellet190" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 654.771, 400 )
+
+[node name="Pellet191" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 653.541, 112 )
+
+[node name="Pellet51" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 208, 496 )
+
+[node name="Pellet138" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 496 )
+
+[node name="Pellet143" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 112 )
+
+[node name="Pellet179" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 112 )
+
+[node name="Pellet184" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 496 )
+
+[node name="Pellet76" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 816, 496 )
+
+[node name="Pellet249" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 112, 496 )
+
+[node name="Pellet17" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 402.459, 80 )
+
+[node name="Pellet84" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 690.459, 80 )
+
+[node name="Pellet33" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 338.459, 80 )
+
+[node name="Pellet161" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 558.771, 112 )
+
+[node name="Pellet172" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 558.771, 496 )
+
+[node name="Pellet165" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 462.771, 112 )
+
+[node name="Pellet176" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 462.771, 496 )
+
+[node name="Pellet96" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 626.459, 80 )
+
+[node name="Pellet50" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 210.459, 80 )
+
+[node name="Pellet242" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 112, 80 )
+
+[node name="Pellet69" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 818.459, 80 )
+
+[node name="Pellet24" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 336 )
+
+[node name="Pellet93" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 336 )
+
+[node name="Pellet42" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 336 )
+
+[node name="Pellet105" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 336 )
+
+[node name="Pellet56" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 336 )
+
+[node name="Pellet71" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 336 )
+
+[node name="Pellet223" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 880, 336 )
+
+[node name="Pellet240" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 80, 336 )
+
+[node name="Pellet228" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 941.541, 336 )
+
+[node name="Pellet239" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 141.541, 336 )
+
+[node name="Pellet20" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 208 )
+
+[node name="Pellet91" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 208 )
+
+[node name="Pellet40" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 208 )
+
+[node name="Pellet102" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 208 )
+
+[node name="Pellet54" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 208 )
+
+[node name="Pellet67" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 208 )
+
+[node name="Pellet29" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 400, 464 )
+
+[node name="Pellet177" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 369.229, 464 )
+
+[node name="Pellet188" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 369.229, 208 )
+
+[node name="Pellet178" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 369.229, 400 )
+
+[node name="Pellet187" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 369.229, 144 )
+
+[node name="Pellet108" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 688, 464 )
+
+[node name="Pellet49" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 336, 464 )
+
+[node name="Pellet112" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 624, 464 )
+
+[node name="Pellet61" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 208, 464 )
+
+[node name="Pellet141" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 240, 464 )
+
+[node name="Pellet144" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 240, 144 )
+
+[node name="Pellet147" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 269.541, 208 )
+
+[node name="Pellet200" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 752, 208 )
+
+[node name="Pellet150" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 269.541, 304 )
+
+[node name="Pellet195" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 752, 304 )
+
+[node name="Pellet202" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 240 )
+
+[node name="Pellet233" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 109.541, 240 )
+
+[node name="Pellet245" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 144, 112 )
+
+[node name="Pellet248" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 142.771, 48 )
+
+[node name="Pellet206" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 368 )
+
+[node name="Pellet231" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 109.541, 368 )
+
+[node name="Pellet209" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 877.541, 48 )
+
+[node name="Pellet212" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 877.541, 112 )
+
+[node name="Pellet215" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 877.541, 496 )
+
+[node name="Pellet255" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 173.541, 496 )
+
+[node name="Pellet219" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 877.541, 560 )
+
+[node name="Pellet253" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 173.541, 560 )
+
+[node name="Pellet152" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 269.541, 400 )
+
+[node name="Pellet193" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 752, 400 )
+
+[node name="Pellet139" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 464 )
+
+[node name="Pellet145" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 80 )
+
+[node name="Pellet180" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 80 )
+
+[node name="Pellet186" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 464 )
+
+[node name="Pellet78" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 816, 464 )
+
+[node name="Pellet18" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 402.459, 144 )
+
+[node name="Pellet90" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 690.459, 144 )
+
+[node name="Pellet39" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 338.459, 144 )
+
+[node name="Pellet100" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 626.459, 144 )
+
+[node name="Pellet53" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 210.459, 144 )
+
+[node name="Pellet146" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 240, 208 )
+
+[node name="Pellet199" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 722.459, 208 )
+
+[node name="Pellet149" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 240, 304 )
+
+[node name="Pellet196" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 722.459, 304 )
+
+[node name="Pellet203" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 880, 240 )
+
+[node name="Pellet234" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 80, 240 )
+
+[node name="Pellet207" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 880, 368 )
+
+[node name="Pellet232" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 80, 368 )
+
+[node name="Pellet210" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 848, 48 )
+
+[node name="Pellet211" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 848, 112 )
+
+[node name="Pellet216" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 848, 496 )
+
+[node name="Pellet254" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 144, 496 )
+
+[node name="Pellet218" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 848, 560 )
+
+[node name="Pellet252" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 144, 560 )
+
+[node name="Pellet153" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 240, 400 )
+
+[node name="Pellet194" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 722.459, 400 )
+
+[node name="Pellet72" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 818.459, 144 )
+
+[node name="Pellet182" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 784, 144 )
+
+[node name="Pellet28" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 400 )
+
+[node name="Pellet107" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 400 )
+
+[node name="Pellet48" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 400 )
+
+[node name="Pellet117" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 400 )
+
+[node name="Pellet66" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 400 )
+
+[node name="Pellet79" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 400 )
+
+[node name="Pellet23" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 401.229, 272 )
+
+[node name="Pellet92" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 689.229, 272 )
+
+[node name="Pellet41" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 337.229, 272 )
+
+[node name="Pellet104" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 625.229, 272 )
+
+[node name="Pellet55" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 209.229, 272 )
+
+[node name="Pellet68" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 817.229, 272 )
+
+[node name="Pellet224" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 880, 272 )
+
+[node name="Pellet237" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 80, 272 )
+
+[node name="Pellet227" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 941.541, 272 )
+
+[node name="Pellet238" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 141.541, 272 )
+
+[node name="Pellet30" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 400, 528 )
+
+[node name="Pellet98" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 688, 528 )
+
+[node name="Pellet45" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 336, 528 )
+
+[node name="Pellet116" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 624, 528 )
+
+[node name="Pellet65" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 208, 528 )
+
+[node name="Pellet140" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 528 )
+
+[node name="Pellet142" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 272, 144 )
+
+[node name="Pellet181" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 144 )
+
+[node name="Pellet185" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 754.459, 528 )
+
+[node name="Pellet148" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 301.541, 208 )
+
+[node name="Pellet201" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 784, 208 )
+
+[node name="Pellet151" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 301.541, 304 )
+
+[node name="Pellet198" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 784, 304 )
+
+[node name="Pellet204" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 941.541, 240 )
+
+[node name="Pellet229" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 141.541, 240 )
+
+[node name="Pellet246" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 176, 112 )
+
+[node name="Pellet247" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 174.771, 48 )
+
+[node name="Pellet205" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 941.541, 368 )
+
+[node name="Pellet230" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 141.541, 368 )
+
+[node name="Pellet208" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 48 )
+
+[node name="Pellet213" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 112 )
+
+[node name="Pellet214" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 496 )
+
+[node name="Pellet217" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 560 )
+
+[node name="Pellet220" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 912, 528 )
+
+[node name="Pellet221" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 909.541, 80 )
+
+[node name="Pellet154" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 301.541, 400 )
+
+[node name="Pellet197" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 784, 400 )
+
+[node name="Pellet82" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 816, 528 )
+
+[node name="Pellet251" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 112, 528 )
+
+[node name="Pellet63" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 208, 560 )
+
+[node name="Pellet81" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 816, 560 )
+
+[node name="Pellet250" parent="Pellets" instance=ExtResource( 3 )]
+position = Vector2( 112, 560 )

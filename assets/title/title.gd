@@ -1,13 +1,18 @@
 extends Label
 
 var disabled = false
-var player = AudioStreamPlayer.new()
+onready var sfx = $"/root/Game/SFX"
+onready var music = $"/root/Game/Music"
+
+func soundPlay():
+	sfx.stream = load("res://assets/sound/click.wav")
+	sfx.stop()
+	sfx.play()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	visible_characters = 0
-	self.add_child(player)
-	player.stream = load("res://assets/sound/click.wav")
+	self.add_child(sfx)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
@@ -24,8 +29,7 @@ func _process(delta):
 			# 		+= means increment, not set (=)
 			visible_characters = int(floor((global.totalDeltaTitle-3)/0.1))
 			if global.titleShown < visible_characters and global.titleShown <= 7:
-				player.stop()
-				player.play()
+				soundPlay()
 			global.titleShown = visible_characters
 		else:
 			if global.totalDeltaTitle >= 3:
@@ -33,8 +37,11 @@ func _process(delta):
 	else:
 		visible_characters = 0
 		hide()
+		if global.inGame == false:
+			disabled = true
 
 func _on_startButton_pressed():
 	disabled = true
-	player.stop()
-	player.play()
+	soundPlay()
+	music.stream = load("res://assets/sound/paclonetheme.ogg")
+	music.play()

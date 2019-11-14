@@ -33,5 +33,5 @@ margin_bottom = 470.296
 custom_fonts/font = SubResource( 2 )
 text = "start"
 script = ExtResource( 3 )
-[connection signal="pressed" from="startButton" to="startButton" method="_on_startButton_pressed"]
 [connection signal="pressed" from="startButton" to="titleLabel" method="_on_startButton_pressed"]
+[connection signal="pressed" from="startButton" to="startButton" method="_on_startButton_pressed"]

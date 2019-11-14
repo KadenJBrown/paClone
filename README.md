@@ -9,6 +9,8 @@ This project was made for fun and to understand godot better
 - [x] Player movement
 - [x] Player animation (wow 2 frames)
 - [x] Hyperspace
-- [ ] Fix hallway blockage
-- [ ] Pellet collect code
+- [x] Fix hallway blockage
+- [x] Pellet collect code
+- [x] Winable
+- [ ] Resettable
 - [ ] ...
