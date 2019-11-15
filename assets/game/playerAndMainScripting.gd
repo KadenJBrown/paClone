@@ -44,13 +44,8 @@ func _process(delta):
 			if !move_and_collide(next_dir*8,true,true,true):# && !move_and_collide(next_dir*-7.5,true,true,true):
 				current_dir = next_dir
 				next_dir = null
-				move_and_collide(current_dir*delta*speed)
-			else:
-				move_and_collide(current_dir*delta*speed)
-			position += current_dir * -1
-		else:
-			move_and_collide(current_dir*delta*speed)
-			position += current_dir * -1
+		move_and_collide(current_dir*delta*speed)
+		position += current_dir * -1
 		# Turn
 		if current_dir == Vector2(1,0):
 			rotation_degrees = 0
