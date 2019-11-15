@@ -1,8 +1,9 @@
-[gd_scene load_steps=47 format=2]
+[gd_scene load_steps=48 format=2]
 
 [ext_resource path="res://assets/game/player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/image/walls.png" type="Texture" id=2]
 [ext_resource path="res://assets/game/pelletObj.tscn" type="PackedScene" id=3]
+[ext_resource path="res://assets/game/ghostObj.tscn" type="PackedScene" id=4]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
 points = PoolVector2Array( 0, 0, 32, 0, 32, 32, 0, 32 )
@@ -1136,3 +1137,6 @@ position = Vector2( 816, 560 )
 
 [node name="Pellet250" parent="Pellets" instance=ExtResource( 3 )]
 position = Vector2( 112, 560 )
+
+[node name="Ghost" parent="." instance=ExtResource( 4 )]
+position = Vector2( 485, 304 )

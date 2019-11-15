@@ -14,5 +14,7 @@ This project was made for fun and to understand godot better
 - [x] Winable
 - [x] Resettable
 - [ ] Failable
-- [ ] Ghost AI
+- [ ] Lives
+- [ ] Ghost Random AI
+- [ ] Ghost Targeted AI
 - [ ] ...
