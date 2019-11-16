@@ -5,6 +5,7 @@ var current = Vector2(-1,0)
 var next = null
 var speed = 200
 var rng = RandomNumberGenerator.new()
+var passed = 0
 
 func _ready():
 	rng.randomize()
@@ -12,12 +13,14 @@ func _ready():
 
 func _process(delta):
 	# Find available directions
+	passed += delta
 	var available = []
 	for x in range(-1,2,2):
 		for y in range(-1,2,2):
 			if Vector2(x,y) * -1 != current && Vector2(x,y) != current && !move_and_collide(Vector2(x,y)*8,true,true,true):
 				available.append(Vector2(x,y))
-	if next == null && available != []:
+	if next == null && available != [] && passed >= 1:
+		passed = 0
 		# Randomize direction
 		next = available[rng.randi_range(0,len(available)-1)]
 	# Check if on next direction and move
